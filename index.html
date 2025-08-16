@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Nessa To Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Minhas Tarefas</h1>
+
+    <!-- Entrada da tarefa -->
+    <input id="taskInput" type="text" placeholder="Criar tarefa...">
+
+    <!-- Tipo de atividade -->
+    <select id="taskType">
+      <option value="faculdade">Faculdade</option>
+      <option value="trabalho">Trabalho</option>
+      <option value="pessoal">Pessoal</option>
+    </select>
+
+    <!-- Prioridade -->
+    <select id="taskPriority">
+      <option value="urgente">⚡ Urgente</option>
+      <option value="intermediario">⏳ Intermediário</option>
+      <option value="baixa">🛌 Pouca urgência</option>
+    </select>
+
+    <!-- Data da tarefa -->
+    <input type="date" id="taskDate">
+
+    <!-- Botão adicionar -->
+    <button onclick="addTask()">Criar</button>
+
+    <!-- Filtros de prioridade -->
+    <div class="filters">
+      <button onclick="filterTasks('todas')">Todas</button>
+      <button onclick="filterTasks('urgente')">Urgente</button>
+      <button onclick="filterTasks('intermediario')">Intermediário</button>
+      <button onclick="filterTasks('baixa')">Pouca urgência</button>
+    </div>
+
+    <!-- Mini calendário -->
+    <label for="filterDate">Filtrar por dia:</label>
+    <input type="date" id="filterDate" onchange="filterByDate(this.value)">
+    <button onclick="filterByDate('')">Mostrar todas</button>
+
+    <!-- Lista de tarefas -->
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
