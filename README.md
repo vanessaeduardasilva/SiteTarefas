@@ -1,6 +1,6 @@
-# Nessa ToDo List
+# Nessa To Do List
 
-Planner de tarefas estilo Notion com tipos de atividades, prioridades e mini-calendário.
+Planner de tarefas com tipos de atividades, prioridades e mini-calendário.
 
 ## Tecnologias
 - HTML
